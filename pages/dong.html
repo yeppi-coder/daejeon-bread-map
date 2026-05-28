@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>동구 추천 코스</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+
+    body{
+      margin:0;
+      background:#f6f1ea;
+      font-family:sans-serif;
+    }
+
+    .container{
+      width:90%;
+      max-width:700px;
+      margin:30px auto;
+    }
+
+    h1{
+      text-align:center;
+      font-size:32px;
+      color:#5c3d1e;
+      margin-bottom:30px;
+      font-weight:bold;
+    }
+
+    .bakery-card{
+
+      background:white;
+
+      border-radius:25px;
+
+      padding:25px;
+
+      margin:0 auto 30px auto;
+
+      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+
+      max-width:500px;
+
+      width:100%;
+
+      box-sizing:border-box;
+    }
+
+    .bakery-card h2{
+
+      font-size:24px;
+
+      color:#5c3d1e;
+
+      margin-bottom:20px;
+    }
+
+    .bakery-card p{
+
+      font-size:16px;
+
+      color:#7a5a36;
+
+      line-height:1.7;
+
+      margin-bottom:12px;
+    }
+
+    .hidden-menu{
+      color:#c9772b;
+      font-weight:bold;
+    }
+
+    .map-box{
+      width:100%;
+      height:250px;
+      border-radius:15px;
+      margin-top:20px;
+    }
+
+    @media (max-width:768px){
+
+      h1{
+        font-size:28px;
+      }
+
+      .bakery-card{
+        padding:20px;
+      }
+
+      .bakery-card h2{
+        font-size:22px;
+      }
+
+      .bakery-card p{
+        font-size:15px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🍞 동구 추천 빵집 코스</h1>
+
+    <!-- 성심당 대전역점 -->
+    <div class="bakery-card">
+
+      <h2>🚉 성심당 대전역점</h2>
+
+      <p>
+        대표 메뉴 :
+        튀김소보로,
+        명란바게트
+      </p>
+
+      <p class="hidden-menu">
+        숨겨진 메뉴 :
+        김치찹쌀주먹밥
+      </p>
+
+      <p>영업시간 : 07:00 ~ 22:30</p>
+
+      <p>휴무일 : 없음</p>
+
+      <div id="map1" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 모노브레드타임 -->
+    <div class="bakery-card">
+
+      <h2>🥖 모노브레드타임</h2>
+
+      <p>
+        대표 메뉴 :
+        소금빵,
+        올리브 치아바타
+      </p>
+
+      <p class="hidden-menu">
+        숨겨진 메뉴 :
+        스콘,
+        에그타르트
+      </p>
+
+      <p>영업시간 : 07:00 ~ 22:00</p>
+
+      <p>휴무일 : 없음</p>
+
+      <div id="map3" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 언니네빵집 -->
+    <div class="bakery-card">
+
+      <h2>🥐 언니네빵집</h2>
+
+      <p>
+        대표 메뉴 :
+        소금빵,
+        크림빵,
+        두쫀쿠
+      </p>
+
+      <p class="hidden-menu">
+        숨겨진 메뉴 :
+        밤식빵
+      </p>
+
+      <p>영업시간 : 월~토 09:00 ~ 21:00</p>
+
+      <p>휴무일 : 매주 일요일</p>
+
+      <div id="map4" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 오렌지트리 -->
+    <div class="bakery-card">
+
+      <h2>🍊 오렌지트리</h2>
+
+      <p>
+        대표 메뉴 :
+        소금빵,
+        초코&슈블링,
+        페스츄리번
+      </p>
+
+      <p class="hidden-menu">
+        숨겨진 메뉴 :
+        크루키,
+        식빵
+      </p>
+
+      <p>
+        영업시간 :
+        평일 10:00 ~ 20:00
+        / 토요일 10:00 ~ 19:00
+      </p>
+
+      <p>휴무일 : 매주 일요일</p>
+
+      <div id="map5" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 달그락잡화점 -->
+    <div class="bakery-card">
+
+      <h2>🧀 달그락잡화점</h2>
+
+      <p>
+        대표 메뉴 :
+        바스크 치즈 케이크
+      </p>
+
+      <p class="hidden-menu">
+        숨겨진 메뉴 :
+        피쫀쿠
+      </p>
+
+      <p>영업시간 : 월~토 11:00 ~ 20:00</p>
+
+      <p>라스트오더 : 19:40</p>
+
+      <p>휴무일 : 매주 일요일</p>
+
+      <div id="map6" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 하르방베이커리 -->
+    <div class="bakery-card">
+
+      <h2>🍔 하르방베이커리</h2>
+
+      <p>
+        대표 메뉴 :
+        햄버거,
+        롤케이크
+      </p>
+
+      <p class="hidden-menu">
+        숨겨진 메뉴 :
+        옥수수 식빵,
+        슈
+      </p>
+
+      <p>영업시간 : 정보 없음</p>
+
+      <div id="map7" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 빵굽는마을 -->
+    <div class="bakery-card">
+
+      <h2>🏡 빵굽는마을</h2>
+
+      <p>대표 메뉴 : 베이비슈</p>
+
+      <p class="hidden-menu">
+        숨겨진 메뉴 :
+        피자빵
+      </p>
+
+      <p>영업시간 : 07:00 ~ 20:30</p>
+
+      <p>휴무일 : 매주 수요일</p>
+
+      <div id="map8" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 보드레 -->
+    <div class="bakery-card">
+
+      <h2>🍪 보드레</h2>
+
+      <p>
+        대표 메뉴 :
+        두쫀쿠,
+        딸기오레오 쫀득쿠키,
+        우리밀 크림치즈무화과휘낭시에
+      </p>
+
+      <p class="hidden-menu">
+        숨겨진 메뉴 :
+        초코프레첼
+      </p>
+
+      <p>영업시간 : 월~토 10:00 ~ 19:30</p>
+
+      <p>휴무일 : 매주 일요일</p>
+
+      <div id="map9" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 해뜨는빵집 -->
+    <div class="bakery-card">
+
+      <h2>🌞 해뜨는빵집</h2>
+
+      <p>
+        대표 메뉴 :
+        조각 롤케이크,
+        소보로빵
+      </p>
+
+      <p class="hidden-menu">
+        숨겨진 메뉴 :
+        소보로빵
+      </p>
+
+      <p>영업시간 : 정보 없음</p>
+
+      <div id="map10" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 파시파시 -->
+    <div class="bakery-card">
+
+      <h2>🌾 파시파시</h2>
+
+      <p>
+        대표 메뉴 :
+        검은콩 쌀식빵,
+        소금빵,
+        식빵
+      </p>
+
+      <p class="hidden-menu">
+        숨겨진 메뉴 :
+        쌀베이글
+      </p>
+
+      <p>영업시간 : 06:30 ~ 21:30</p>
+
+      <p>휴무일 : 매주 수요일</p>
+
+      <div id="map11" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 베이커리킥 -->
+    <div class="bakery-card">
+
+      <h2>🥨 베이커리킥</h2>
+
+      <p>
+        대표 메뉴 :
+        명란 매쉬드포테이토 소금빵,
+        휘낭시에
+      </p>
+
+      <p class="hidden-menu">
+        숨겨진 메뉴 :
+        모찌빵,
+        후르츠 산도
+      </p>
+
+      <p>영업시간 : 11:00 ~ 20:30</p>
+
+      <p>휴무일 : 없음</p>
+
+      <div id="map12" class="map-box"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- 카카오맵 API -->
+  <script
+  src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d97afdeb858533987b1d9c0bdb81ea5a">
+  </script>
+
+  <script>
+
+    function createMap(id, lat, lng){
+
+      const container =
+        document.getElementById(id);
+
+      const options = {
+        center: new kakao.maps.LatLng(lat, lng),
+        level: 3,
+      };
+
+      const map =
+        new kakao.maps.Map(container, options);
+
+      const marker =
+        new kakao.maps.Marker({
+          position: new kakao.maps.LatLng(lat, lng),
+        });
+
+      marker.setMap(map);
+    }
+
+    createMap('map1', 36.3320, 127.4345);
+    createMap('map3', 36.3360, 127.4400);
+    createMap('map4', 36.3335, 127.4360);
+    createMap('map5', 36.3315, 127.4375);
+    createMap('map6', 36.3350, 127.4390);
+    createMap('map7', 36.3305, 127.4355);
+    createMap('map8', 36.3340, 127.4410);
+    createMap('map9', 36.3365, 127.4420);
+    createMap('map10', 36.3370, 127.4435);
+    createMap('map11', 36.3380, 127.4440);
+    createMap('map12', 36.3390, 127.4450);
+
+  </script>
+
+</body>
+</html>

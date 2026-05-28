@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>중구 추천 코스</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+
+    body{
+      margin:0;
+      background:#f6f1ea;
+      font-family:sans-serif;
+    }
+
+    .container{
+      width:90%;
+      max-width:700px;
+      margin:30px auto;
+    }
+
+    h1{
+      text-align:center;
+      font-size:32px;
+      color:#5c3d1e;
+      margin-bottom:30px;
+      font-weight:bold;
+    }
+
+    .bakery-card{
+
+      background:white;
+
+      border-radius:25px;
+
+      padding:25px;
+
+      margin:0 auto 30px auto;
+
+      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+
+      max-width:500px;
+
+      width:100%;
+
+      box-sizing:border-box;
+    }
+
+    .bakery-card h2{
+
+      font-size:24px;
+
+      color:#5c3d1e;
+
+      margin-bottom:20px;
+    }
+
+    .bakery-card p{
+
+      font-size:16px;
+
+      color:#7a5a36;
+
+      line-height:1.7;
+
+      margin-bottom:12px;
+    }
+
+    .hidden-menu{
+      color:#c9772b;
+      font-weight:bold;
+    }
+
+    .map-box{
+      width:100%;
+      height:250px;
+      border-radius:15px;
+      margin-top:20px;
+    }
+
+    @media (max-width:768px){
+
+      h1{
+        font-size:28px;
+      }
+
+      .bakery-card{
+        padding:20px;
+      }
+
+      .bakery-card h2{
+        font-size:22px;
+      }
+
+      .bakery-card p{
+        font-size:15px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🍞 중구 추천 빵집 코스</h1>
+
+    <!-- 성심당 본점 -->
+    <div class="bakery-card">
+
+      <h2>🥖 성심당 본점</h2>
+
+      <p>대표 메뉴 : 튀김소보로</p>
+
+      <p class="hidden-menu">
+        숨은 메뉴 : 김치찹쌀주먹밥
+      </p>
+
+      <p>영업시간 : 08:00 ~ 22:00</p>
+
+      <p>휴무일 : 없음</p>
+
+      <p>
+        학생 추천 :
+        대전 빵지순례 필수 코스
+      </p>
+
+      <div id="map1" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 성심당 케익부띠끄 -->
+    <div class="bakery-card">
+
+      <h2>🍰 성심당 케익부띠끄</h2>
+
+      <p>대표 메뉴 : 딸기시루</p>
+
+      <p class="hidden-menu">
+        숨은 메뉴 : 순수롤
+      </p>
+
+      <p>영업시간 : 08:00 ~ 21:30</p>
+
+      <p>휴무일 : 없음</p>
+
+      <p>
+        학생 추천 :
+        케이크 좋아하면 꼭 들러야 하는 곳
+      </p>
+
+      <div id="map2" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 램키드 -->
+    <div class="bakery-card">
+
+      <h2>🍮 램키드 (RAMKID)</h2>
+
+      <p>대표 메뉴 : 꿈돌이/꿈순이/꿈똥이 푸딩</p>
+
+      <p class="hidden-menu">
+        숨은 메뉴 : 버터떡
+      </p>
+
+      <p>영업시간 : 11:00 ~ 20:30</p>
+
+      <p>휴무일 : 없음</p>
+
+      <p>
+        학생 추천 :
+        감성 디저트 좋아하는 사람 추천
+      </p>
+
+      <div id="map3" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 다다제과점 -->
+    <div class="bakery-card">
+
+      <h2>🥯 다다제과점</h2>
+
+      <p>대표 메뉴 : 베이글샌드, 쫀득빵</p>
+
+      <p class="hidden-menu">
+        숨은 메뉴 : 버터떡
+      </p>
+
+      <p>
+        영업시간 :
+        목~토 12:00 ~ 17:30 /
+        일요일 13:00 ~ 17:30
+      </p>
+
+      <p>휴무일 : 매주 월, 화, 수요일</p>
+
+      <p>
+        학생 추천 :
+        담백한 빵 좋아하면 만족도 높음
+      </p>
+
+      <div id="map4" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 빵담아 -->
+    <div class="bakery-card">
+
+      <h2>🥐 빵담아</h2>
+
+      <p>대표 메뉴 : 소금빵, 케이크</p>
+
+      <p class="hidden-menu">
+        숨은 메뉴 : 앙버터빵
+      </p>
+
+      <p>영업시간 : 07:00 ~ 20:30</p>
+
+      <p>휴무일 : 없음</p>
+
+      <p>
+        학생 추천 :
+        가성비 좋고 종류 다양함
+      </p>
+
+      <div id="map5" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 늘솜베이커리 -->
+    <div class="bakery-card">
+
+      <h2>🍞 늘솜베이커리</h2>
+
+      <p>대표 메뉴 : 식빵, 바게트, 케이크</p>
+
+      <p class="hidden-menu">
+        숨은 메뉴 : 고로케, 찹쌀 도너츠
+      </p>
+
+      <p>영업시간 : 07:00 ~ 23:00</p>
+
+      <p>휴무일 : 매달 1, 3번째 일요일</p>
+
+      <p>
+        학생 추천 :
+        옛날 동네빵집 감성 제대로
+      </p>
+
+      <div id="map6" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 극동제과점 -->
+    <div class="bakery-card">
+
+      <h2>🥖 극동제과점</h2>
+
+      <p>대표 메뉴 : 소금빵</p>
+
+      <p class="hidden-menu">
+        숨은 메뉴 : 고구마크림빵
+      </p>
+
+      <p>영업시간 : 08:00 ~ 22:00</p>
+
+      <p>휴무일 : 매주 월요일</p>
+
+      <p>
+        학생 추천 :
+        레트로 감성 좋아하면 추천
+      </p>
+
+      <div id="map7" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 다소리과자점 -->
+    <div class="bakery-card">
+
+      <h2>🧁 다소리과자점</h2>
+
+      <p>대표 메뉴 : 휘낭시에</p>
+
+      <p class="hidden-menu">
+        숨은 메뉴 : 버터떡
+      </p>
+
+      <p>
+        영업시간 :
+        수~금 12:00 ~ 19:00 /
+        토요일 12:00 ~ 18:00
+      </p>
+
+      <p>휴무일 : 매주 일, 월, 화요일</p>
+
+      <p>
+        학생 추천 :
+        디저트류 퀄리티 좋음,
+        특히 휘낭시에 추천
+      </p>
+
+      <div id="map8" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 미미제과점 -->
+    <div class="bakery-card">
+
+      <h2>🥨 미미제과점</h2>
+
+      <p>
+        대표 메뉴 :
+        프레첼소금빵,
+        밀크버터쿠키
+      </p>
+
+      <p class="hidden-menu">
+        숨은 메뉴 :
+        두바이시리즈,
+        왁뿌소금빵
+      </p>
+
+      <p>
+        영업시간 :
+        11:00 ~ 17:00
+        (16:30 라스트오더)
+      </p>
+
+      <p>휴무일 : 없음</p>
+
+      <p>
+        학생 추천 :
+        버터 풍미 좋아하는 사람 추천
+      </p>
+
+      <div id="map9" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 뮤제 -->
+    <div class="bakery-card">
+
+      <h2>🍮 뮤제</h2>
+
+      <p>
+        대표 메뉴 :
+        바닐라플랑,
+        빨미에
+      </p>
+
+      <p class="hidden-menu">
+        숨은 메뉴 :
+        타르트,
+        크루아상
+      </p>
+
+      <p>
+        영업시간 :
+        11:00 ~ 22:00
+        (21:30 라스트오더)
+      </p>
+
+      <p>휴무일 : 매주 수요일</p>
+
+      <p>
+        학생 추천 :
+        블루리본이 인정한 프리미엄 베이커리
+      </p>
+
+      <div id="map10" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 달몽브레드 -->
+    <div class="bakery-card">
+
+      <h2>🌰 달몽브레드</h2>
+
+      <p>대표 메뉴 : 밤파이</p>
+
+      <p class="hidden-menu">
+        숨은 메뉴 : 밤식빵
+      </p>
+
+      <p>
+        영업시간 :
+        08:00 ~ 19:30
+        (13:00 ~ 14:00 브레이크타임)
+      </p>
+
+      <p>휴무일 : 매주 일요일</p>
+
+      <p>
+        학생 추천 :
+        달달한 빵 좋아하면 만족도 높음
+      </p>
+
+      <div id="map11" class="map-box"></div>
+
+    </div>
+
+
+    <!-- 정직한롤케이크 -->
+    <div class="bakery-card">
+
+      <h2>🍥 정직한롤케이크</h2>
+
+      <p>
+        대표 메뉴 :
+        롤케이크(계절별 변경),
+        구움과자
+      </p>
+
+      <p class="hidden-menu">
+        숨은 메뉴 :
+        스폰지 케이크
+      </p>
+
+      <p>영업시간 : 11:00 ~ 19:00</p>
+
+      <p>휴무일 : 매주 일요일</p>
+
+      <p>
+        학생 추천 :
+        선물용으로도 인기 많음
+      </p>
+
+      <div id="map12" class="map-box"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- 카카오맵 API -->
+  <script
+  src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d97afdeb858533987b1d9c0bdb81ea5a">
+  </script>
+
+  <script>
+
+    function createMap(id, lat, lng){
+
+      const container =
+        document.getElementById(id);
+
+      const options = {
+        center: new kakao.maps.LatLng(lat, lng),
+        level: 3,
+      };
+
+      const map =
+        new kakao.maps.Map(container, options);
+
+      const marker =
+        new kakao.maps.Marker({
+          position: new kakao.maps.LatLng(lat, lng),
+        });
+
+      marker.setMap(map);
+    }
+
+    createMap('map1', 36.3277, 127.4276);
+    createMap('map2', 36.3280, 127.4274);
+    createMap('map3', 36.3261, 127.4253);
+    createMap('map4', 36.3255, 127.4248);
+    createMap('map5', 36.3267, 127.4265);
+    createMap('map6', 36.3248, 127.4239);
+    createMap('map7', 36.3263, 127.4226);
+    createMap('map8', 36.3271, 127.4247);
+    createMap('map9', 36.3258, 127.4280);
+    createMap('map10', 36.3246, 127.4271);
+    createMap('map11', 36.3269, 127.4262);
+    createMap('map12', 36.3254, 127.4251);
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #fff8f0;
+}
+
+.container {
+  text-align: center;
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: 48px;
+  color: #5c3b1e;
+}
+
+p {
+  color: #7a5c45;
+  margin-bottom: 40px;
+}
+
+.district-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+button {
+  background-color: #d9a066;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.bakery-card {
+  background-color: white;
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+  text-align: left;
+}
+
+.bakery-card h2 {
+  color: #5c3b1e;
+}
+
+.bakery-card p {
+  margin: 10px 0;
+}
+
+.hidden-menu {
+  color: #d97706;
+  font-weight: bold;
+}

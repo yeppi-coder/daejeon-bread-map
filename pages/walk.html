@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>🚌 대중교통 코스</title>
+
+  <style>
+
+    body{
+      margin:0;
+      font-family:sans-serif;
+      background:#fff8f0;
+    }
+
+    .container{
+
+      width:90%;
+
+      max-width:700px;
+
+      margin:30px auto;
+    }
+
+    h1{
+
+      text-align:center;
+
+      font-size:32px;
+
+      color:#5c3d1e;
+
+      margin-bottom:16px;
+
+      font-weight:bold;
+    }
+
+    .sub{
+
+      text-align:center;
+
+      font-size:16px;
+
+      color:#7a5a36;
+
+      margin-bottom:30px;
+
+      line-height:1.6;
+    }
+
+    .course-box{
+
+      background:white;
+
+      border-radius:25px;
+
+      padding:25px;
+
+      margin:0 auto 30px auto;
+
+      overflow:hidden;
+
+      box-shadow:
+      0 4px 15px rgba(0,0,0,0.08);
+
+      max-width:500px;
+
+      width:100%;
+
+      box-sizing:border-box;
+    }
+
+    .course-title{
+
+      font-size:24px;
+
+      color:#5c3d1e;
+
+      margin-bottom:20px;
+
+      font-weight:bold;
+
+      line-height:1.5;
+    }
+
+    .step{
+
+      font-size:16px;
+
+      line-height:1.8;
+
+      color:#5c3d1e;
+
+      margin-bottom:12px;
+    }
+
+    .menu{
+
+      color:#c9772b;
+
+      font-size:16px;
+
+      font-weight:bold;
+
+      margin-top:10px;
+
+      margin-bottom:10px;
+
+      line-height:1.6;
+    }
+
+    .hidden{
+
+      color:#b45309;
+
+      font-size:15px;
+
+      margin-bottom:10px;
+
+      line-height:1.6;
+    }
+
+    .holiday{
+
+      color:#9a7b4f;
+
+      font-size:15px;
+
+      margin-top:8px;
+
+      margin-bottom:6px;
+    }
+
+    .time{
+
+      color:#8b6b43;
+
+      font-size:15px;
+
+      margin-bottom:8px;
+
+      line-height:1.6;
+    }
+
+    .honey{
+
+      font-size:15px;
+
+      color:#7a5a36;
+
+      line-height:1.7;
+    }
+
+    .tip{
+
+      margin-top:20px;
+
+      padding:18px;
+
+      background:#fff2df;
+
+      border-radius:15px;
+
+      font-size:15px;
+
+      color:#7a5a36;
+
+      line-height:1.8;
+    }
+
+    .map{
+
+      width:100%;
+
+      height:250px;
+
+      border-radius:15px;
+
+      margin-top:18px;
+
+      margin-bottom:25px;
+    }
+
+    @media (max-width:768px){
+
+      h1{
+        font-size:28px;
+      }
+
+      .course-box{
+        padding:20px;
+      }
+
+      .course-title{
+        font-size:22px;
+      }
+
+      .step,
+      .menu,
+      .hidden,
+      .holiday,
+      .time,
+      .honey,
+      .tip{
+        font-size:15px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>
+      🚌 대중교통 코스
+    </h1>
+
+    <div class="sub">
+      지하철과 버스로 이동 가능한
+      대전 빵 + 맛집 추천 코스
+    </div>
+
+    <div class="course-box">
+
+      <div class="course-title">
+        🥐 중구 → 서구 감성 빵지순례 코스
+      </div>
+
+
+      <!-- 성심당 -->
+
+      <div class="step">
+
+        📍 성심당 본점 (중구)<br>
+
+        <div class="menu">
+          대표 메뉴 :
+          튀김소보로
+        </div>
+
+        <div class="hidden">
+          숨은 메뉴 :
+          명란바게트,
+          김치찹쌀주먹밥
+        </div>
+
+        <div class="holiday">
+          휴무 : 없음
+        </div>
+
+        <div class="time">
+          영업시간 : 08:00 ~ 22:00
+        </div>
+
+        <div class="honey">
+          💡 오후 시간대 방문이 덜 붐빔
+        </div>
+
+      </div>
+
+      <div id="map1" class="map"></div>
+
+      <div class="step">
+        ↓
+      </div>
+
+
+      <!-- 영춘모찌 -->
+
+      <div class="step">
+
+        🍓 영춘모찌 (중구)<br>
+
+        <div class="menu">
+          대표 메뉴 :
+          과일모찌
+        </div>
+
+        <div class="hidden">
+          숨은 메뉴 :
+          딸기백앙금모찌(시즌)
+        </div>
+
+        <div class="holiday">
+          휴무 : 매주 일요일
+        </div>
+
+        <div class="time">
+          영업시간 : 09:00 ~ 13:00
+        </div>
+
+        <div class="honey">
+          💡 늦게 가면 품절 많음!
+        </div>
+
+      </div>
+
+      <div id="map2" class="map"></div>
+
+      <div class="step">
+        ↓
+      </div>
+
+
+      <!-- 하레하레 -->
+
+      <div class="step">
+
+        ☕ 하레하레 둔산점<br>
+
+        <div class="menu">
+          대표 메뉴 :
+          딸기밭,
+          소금빵,
+          쌀치즈카스테라
+        </div>
+
+        <div class="hidden">
+          숨은 메뉴 :
+          어니언크림치즈,
+          쪽파프리글
+        </div>
+
+        <div class="holiday">
+          휴무 : 없음
+        </div>
+
+        <div class="time">
+          영업시간 : 08:00 ~ 21:00
+        </div>
+
+        <div class="honey">
+          💡 쌀로 만든 빵이라
+          더 쫀득하고 담백함
+        </div>
+
+      </div>
+
+      <div id="map3" class="map"></div>
+
+      <div class="step">
+        ↓
+      </div>
+
+
+      <!-- 미미제과점 -->
+
+      <div class="step">
+
+        🍞 미미제과점 (갈마)<br>
+
+        <div class="menu">
+          대표 메뉴 :
+          프레첼소금빵,
+          밀크버터쿠키
+        </div>
+
+        <div class="hidden">
+          숨은 메뉴 :
+          두바이크루키,
+          왁뿌소금빵,
+          두바이쫀득쿠키
+        </div>
+
+        <div class="holiday">
+          휴무 : 없음
+        </div>
+
+        <div class="time">
+          영업시간 :
+          11:00 ~ 17:00
+          (라스트오더 16:30)
+        </div>
+
+        <div class="honey">
+          💡 따뜻할 때 먹으면
+          버터향 대박
+        </div>
+
+      </div>
+
+      <div id="map4" class="map"></div>
+
+      <div class="step">
+        ↓
+      </div>
+
+
+      <!-- 플래닛 에그타르트 -->
+
+      <div class="step">
+
+        🥧 플래닛 에그타르트 (갈마)<br>
+
+        <div class="menu">
+          대표 메뉴 :
+          바닐라 에그타르트
+        </div>
+
+        <div class="hidden">
+          숨은 메뉴 :
+          라즈베리 에그타르트
+        </div>
+
+        <div class="holiday">
+          휴무 : 매주 월요일
+        </div>
+
+        <div class="time">
+          영업시간 :
+          화~토 10:30 ~ 17:00<br>
+          일요일 10:30 ~ 16:00
+        </div>
+
+        <div class="honey">
+          💡 에그타르트 위에 소금 뿌려먹으면 킥!!
+        </div>
+
+      </div>
+
+      <div id="map5" class="map"></div>
+
+
+      <!-- 이동 팁 -->
+
+      <div class="tip">
+
+        🚇 추천 이동 방법<br><br>
+
+        • 중구 코스는 도보 이동 가능<br>
+        • 둔산 이동은 지하철 + 버스 추천<br>
+        • 갈마동은 버스로 10분 내 이동 가능<br><br>
+
+        💡 하루 코스로 돌기 좋은 동선!
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- 카카오맵 API -->
+
+  <script
+  src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d97afdeb858533987b1d9c0bdb81ea5a">
+  </script>
+
+  <script>
+
+    function createMap(id, lat, lng){
+
+      const container =
+        document.getElementById(id);
+
+      const options = {
+
+        center:
+          new kakao.maps.LatLng(
+            lat,
+            lng
+          ),
+
+        level:3,
+      };
+
+      const map =
+        new kakao.maps.Map(
+          container,
+          options
+        );
+
+      const marker =
+        new kakao.maps.Marker({
+
+          position:
+            new kakao.maps.LatLng(
+              lat,
+              lng
+            ),
+        });
+
+      marker.setMap(map);
+    }
+
+
+    createMap(
+      'map1',
+      36.3277,
+      127.4272
+    );
+
+    createMap(
+      'map2',
+      36.3265,
+      127.4280
+    );
+
+    createMap(
+      'map3',
+      36.3510,
+      127.3780
+    );
+
+    createMap(
+      'map4',
+      36.3485,
+      127.3725
+    );
+
+    createMap(
+      'map5',
+      36.3470,
+      127.3700
+    );
+
+  </script>
+
+</body>
+</html>

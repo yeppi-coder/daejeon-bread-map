@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>💸 가성비 코스</title>
+
+  <style>
+
+    body{
+      margin:0;
+      font-family:sans-serif;
+      background:#fff8f0;
+    }
+
+    .container{
+
+      width:90%;
+
+      max-width:700px;
+
+      margin:30px auto;
+    }
+
+    h1{
+
+      text-align:center;
+
+      font-size:32px;
+
+      color:#5c3d1e;
+
+      margin-bottom:16px;
+
+      font-weight:bold;
+    }
+
+    .sub{
+
+      text-align:center;
+
+      font-size:16px;
+
+      color:#7a5a36;
+
+      margin-bottom:30px;
+
+      line-height:1.6;
+    }
+
+    .bakery-card{
+
+      background:white;
+
+      border-radius:25px;
+
+      padding:25px;
+
+      margin:0 auto 30px auto;
+
+      overflow:hidden;
+
+      box-shadow:
+      0 4px 15px rgba(0,0,0,0.08);
+
+      max-width:500px;
+
+      width:100%;
+
+      box-sizing:border-box;
+    }
+
+    .title{
+
+      font-size:24px;
+
+      font-weight:bold;
+
+      color:#5c3d1e;
+
+      margin-bottom:18px;
+    }
+
+    .menu{
+
+      color:#c9772b;
+
+      font-size:17px;
+
+      font-weight:bold;
+
+      margin-bottom:12px;
+
+      line-height:1.6;
+    }
+
+    .hidden{
+
+      color:#b45309;
+
+      font-size:16px;
+
+      margin-bottom:10px;
+
+      line-height:1.6;
+    }
+
+    .holiday{
+
+      color:#9a7b4f;
+
+      font-size:15px;
+
+      margin-bottom:8px;
+    }
+
+    .time{
+
+      color:#8b6b43;
+
+      font-size:15px;
+
+      margin-bottom:12px;
+    }
+
+    .tip{
+
+      color:#7a5a36;
+
+      font-size:16px;
+
+      line-height:1.7;
+
+      margin-bottom:20px;
+    }
+
+    .map{
+
+      width:100%;
+
+      height:250px;
+
+      border-radius:15px;
+    }
+
+    @media (max-width:768px){
+
+      h1{
+        font-size:28px;
+      }
+
+      .bakery-card{
+        padding:20px;
+      }
+
+      .title{
+        font-size:22px;
+      }
+
+      .menu{
+        font-size:16px;
+      }
+
+      .hidden,
+      .holiday,
+      .time,
+      .tip{
+        font-size:15px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>
+      💸 가성비 빵지순례 코스
+    </h1>
+
+    <div class="sub">
+      가격도 맛도 만족스러운
+      대전 가성비 빵집 추천!
+    </div>
+
+
+    <!-- 성심당 -->
+
+    <div class="bakery-card">
+
+      <div class="title">
+        🥖 성심당 본점
+      </div>
+
+      <div class="menu">
+        대표 메뉴 : 튀김소보로
+      </div>
+
+      <div class="hidden">
+        숨은 메뉴 :
+        명란바게트,
+        김치찹쌀주먹밥
+      </div>
+
+      <div class="holiday">
+        휴무 : 없음
+      </div>
+
+      <div class="time">
+        영업시간 : 08:00 ~ 22:00
+      </div>
+
+      <div class="tip">
+        💡 가성비 최고!
+        만원 이하로도 빵 한가득 가능
+      </div>
+
+      <div id="map1" class="map"></div>
+
+    </div>
+
+
+    <!-- 성심당 케이크부띠끄 -->
+
+    <div class="bakery-card">
+
+      <div class="title">
+        🎂 성심당 케익부띠끄
+      </div>
+
+      <div class="menu">
+        대표 메뉴 : 과일시루
+      </div>
+
+      <div class="hidden">
+        숨은 메뉴 :
+        순우유롤케이크
+      </div>
+
+      <div class="holiday">
+        휴무 : 없음
+      </div>
+
+      <div class="time">
+        영업시간 : 08:00 ~ 21:30
+      </div>
+
+      <div class="tip">
+        💡 조각케이크 가격도 저렴해서
+        부담없이 먹기 좋음
+      </div>
+
+      <div id="map2" class="map"></div>
+
+    </div>
+
+
+    <!-- 내가잘가는빵집 -->
+
+    <div class="bakery-card">
+
+      <div class="title">
+        🧈 내가잘가는빵집
+      </div>
+
+      <div class="menu">
+        대표 메뉴 : 소금빵
+      </div>
+
+      <div class="hidden">
+        숨은 메뉴 :
+        호두파이,
+        쑥덕쑥덕
+      </div>
+
+      <div class="holiday">
+        휴무 : 없음
+      </div>
+
+      <div class="time">
+        영업시간 : 07:00 ~ 24:00
+      </div>
+
+      <div class="tip">
+        💡 천연 발효빵이라 속이 편안함!
+      </div>
+
+      <div id="map3" class="map"></div>
+
+    </div>
+
+
+    <!-- 손수베이커리 -->
+
+    <div class="bakery-card">
+
+      <div class="title">
+        🍞 손수베이커리
+      </div>
+
+      <div class="menu">
+        대표 메뉴 : 맘모스빵
+      </div>
+
+      <div class="hidden">
+        숨은 메뉴 :
+        칠리스소금빵,
+        불닭야끼소바빵
+      </div>
+
+      <div class="holiday">
+        휴무 : 없음
+      </div>
+
+      <div class="time">
+        영업시간 : 08:00 ~ 22:00
+      </div>
+
+      <div class="tip">
+        💡 맘모스빵 종류가 많아서 추천!
+      </div>
+
+      <div id="map4" class="map"></div>
+
+    </div>
+
+
+    <!-- 노른자제과점 -->
+
+    <div class="bakery-card">
+
+      <div class="title">
+        🥐 노른자제과점
+      </div>
+
+      <div class="menu">
+        대표 메뉴 :
+        뚱에그타르트,
+        상하이버터떡
+      </div>
+
+      <div class="hidden">
+        숨은 메뉴 :
+        쏠티카라멜 휘낭시에
+      </div>
+
+      <div class="holiday">
+        휴무 : 매주 일요일
+      </div>
+
+      <div class="time">
+        영업시간 : 12:00 ~ 20:00
+      </div>
+
+      <div class="tip">
+        💡 빵들이 나오는 시간이 달라
+        확인해보고 가기!
+      </div>
+
+      <div id="map5" class="map"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- 카카오맵 API -->
+
+  <script
+  src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d97afdeb858533987b1d9c0bdb81ea5a">
+  </script>
+
+  <script>
+
+    function createMap(id, lat, lng){
+
+      const container =
+        document.getElementById(id);
+
+      const options = {
+        center:
+          new kakao.maps.LatLng(lat, lng),
+
+        level:3,
+      };
+
+      const map =
+        new kakao.maps.Map(
+          container,
+          options
+        );
+
+      const marker =
+        new kakao.maps.Marker({
+
+          position:
+            new kakao.maps.LatLng(
+              lat,
+              lng
+            ),
+        });
+
+      marker.setMap(map);
+    }
+
+
+    createMap(
+      'map1',
+      36.3277,
+      127.4272
+    );
+
+    createMap(
+      'map2',
+      36.3285,
+      127.4268
+    );
+
+    createMap(
+      'map3',
+      36.3500,
+      127.3770
+    );
+
+    createMap(
+      'map4',
+      36.3410,
+      127.3900
+    );
+
+    createMap(
+      'map5',
+      36.3520,
+      127.3790
+    );
+
+  </script>
+
+</body>
+</html>
