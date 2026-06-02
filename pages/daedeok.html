@@ -332,8 +332,8 @@
 </div>
   <!-- 카카오맵 API -->
   <script
-  src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d97afdeb858533987b1d9c0bdb81ea5a">
-  </script>
+src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d97afdeb858533987b1d9c0bdb81ea5a&libraries=services">
+</script>
 
   <script>
 
@@ -456,19 +456,40 @@ const places = [
 
 ];
 
+const geocoder =
+  new kakao.maps.services.Geocoder();
+
 places.forEach(place => {
 
-  new kakao.maps.Marker({
+  geocoder.addressSearch(
+    place.address,
 
-    map:allMap,
+    function(result,status){
 
-    position:
-      new kakao.maps.LatLng(
-        place.lat,
-        place.lng
-      )
+      if(
+        status ===
+        kakao.maps.services.Status.OK
+      ){
 
-  });
+        const coords =
+          new kakao.maps.LatLng(
+            result[0].y,
+            result[0].x
+          );
+
+        new kakao.maps.Marker({
+
+          map:allMap,
+
+          position:coords
+
+        });
+
+      }
+
+    }
+
+  );
 
 });
   </script>
