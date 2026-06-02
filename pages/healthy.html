@@ -88,18 +88,16 @@
       line-height:1.7;
     }
 
-    iframe{
+    .map{
 
-      width:100%;
+  width:100%;
 
-      height:250px;
+  height:250px;
 
-      border:none;
+  border-radius:15px;
 
-      border-radius:15px;
-
-      margin-top:20px;
-    }
+  margin-top:20px;
+}
 
     @media (max-width:768px){
 
@@ -167,10 +165,7 @@
         🥗 부담 없이 먹기 좋은 건강빵 맛집
       </div>
 
-      <iframe
-        src="https://maps.google.com/maps?q=내가잘가는빵집&t=&z=15&ie=UTF8&iwloc=&output=embed">
-      </iframe>
-
+      <div id="map1" class="map"></div>
     </div>
 
 
@@ -207,10 +202,7 @@
         🌾 건강한 식사빵 좋아하는 사람 추천
       </div>
 
-      <iframe
-        src="https://maps.google.com/maps?q=slow+bread+daejeon&t=&z=15&ie=UTF8&iwloc=&output=embed">
-      </iframe>
-
+      <div id="map2" class="map"></div>
     </div>
 
 
@@ -250,9 +242,7 @@
         🌱 부드럽고 편하게 먹기 좋은 스타일
       </div>
 
-      <iframe
-        src="https://maps.google.com/maps?q=하레하레+대전&t=&z=15&ie=UTF8&iwloc=&output=embed">
-      </iframe>
+      <div id="map3" class="map"></div>
 
     </div>
 
@@ -292,10 +282,7 @@
         🍞 담백하고 깔끔한 맛이 특징
       </div>
 
-      <iframe
-        src="https://maps.google.com/maps?q=파시파시+대전&t=&z=15&ie=UTF8&iwloc=&output=embed">
-      </iframe>
-
+      <div id="map4" class="map"></div>
     </div>
 
 
@@ -335,13 +322,95 @@
         🌱 비건 식단/클린푸드 관심 있는 사람 추천
       </div>
 
-      <iframe
-        src="https://maps.google.com/maps?q=세이비건+대전&t=&z=15&ie=UTF8&iwloc=&output=embed">
-      </iframe>
+      <div id="map5" class="map"></div>
 
     </div>
 
   </div>
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d97afdeb858533987b1d9c0bdb81ea5a&libraries=services"></script>
 
+<script>
+
+function createMap(id, address){
+
+  const container =
+    document.getElementById(id);
+
+  const options = {
+    center:
+      new kakao.maps.LatLng(
+        36.3504,
+        127.3845
+      ),
+    level:3
+  };
+
+  const map =
+    new kakao.maps.Map(
+      container,
+      options
+    );
+
+  const geocoder =
+    new kakao.maps.services.Geocoder();
+
+  geocoder.addressSearch(
+    address,
+    function(result,status){
+
+      if(
+        status ===
+        kakao.maps.services.Status.OK
+      ){
+
+        const coords =
+          new kakao.maps.LatLng(
+            result[0].y,
+            result[0].x
+          );
+
+        map.setCenter(coords);
+
+        new kakao.maps.Marker({
+          map:map,
+          position:coords
+        });
+
+      }
+
+    }
+  );
+
+}
+
+/* 내가잘가는빵집 */
+createMap(
+  'map1',
+  '대전 서구 신갈마로 153'
+);
+
+/* Slow Bread */
+createMap(
+  'map2',
+  '대전 유성구 유성대로 1734-1'
+);
+
+createMap(
+  'map3',
+  '대전 서구 둔산로 155 크로바아파트 제상가동 1층 하레하레'
+);
+
+createMap(
+  'map4',
+  '대전광역시 동구 성남로 15 1층 104호 파시파시'
+);
+
+/* 세이비건 */
+createMap(
+  'map5',
+  '대전 중구 대종로 585 1층 세이비건'
+);
+
+</script>
 </body>
 </html>

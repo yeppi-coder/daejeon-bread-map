@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>✨ 추천 코스 만들기</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:sans-serif;
+    background:#fff8f0;
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    margin:40px auto;
+}
+
+h1{
+    text-align:center;
+    color:#5c3d1e;
+    margin-bottom:15px;
+}
+
+.sub{
+    text-align:center;
+    color:#7a5a36;
+    margin-bottom:30px;
+}
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+label{
+    cursor:pointer;
+    font-size:18px;
+}
+
+input[type="checkbox"]{
+    transform:scale(1.3);
+    margin-right:12px;
+}
+
+button{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#d2a76f;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+}
+
+button:hover{
+    background:#b98950;
+}
+
+.result{
+
+    margin-top:30px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+    display:none;
+}
+
+.result h2{
+    color:#5c3d1e;
+}
+
+.course-item{
+    font-size:20px;
+    margin:10px 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>✨ 나만의 빵지순례</h1>
+
+<div class="sub">
+가고 싶은 빵집을 최대 5개까지 선택하세요
+</div>
+
+<div class="card"><label><input type="checkbox" value="성심당본점">🥖 성심당본점</label></div>
+<div class="card"><label><input type="checkbox" value="성심당케익부띠끄">🎂 성심당케익부띠끄</label></div>
+<div class="card"><label><input type="checkbox" value="성심당 대전역점">🚉 성심당 대전역점</label></div>
+<div class="card"><label><input type="checkbox" value="디씨씨 성심당">🏢성심당 DCC</label></div>
+<div class="card"><label><input type="checkbox" value="젤리포에">🍰 젤리포에</label></div>
+<div class="card"><label><input type="checkbox" value="램키드(RAMKID)">🥐 램키드(RAMKID)</label></div>
+<div class="card"><label><input type="checkbox" value="이런날">☀️ 이런날</label></div>
+<div class="card"><label><input type="checkbox" value="내가잘가는빵집">🧈 내가잘가는빵집</label></div>
+<div class="card"><label><input type="checkbox" value="꾸드뱅">🥖 꾸드뱅</label></div>
+<div class="card"><label><input type="checkbox" value="파티세리소신">🍰 파티세리소신</label></div>
+<div class="card"><label><input type="checkbox" value="그린베이커리">🌿 그린베이커리</label></div>
+<div class="card"><label><input type="checkbox" value="브레드마마 원신흥점">🍞 브레드마마 원신흥점</label></div>
+<div class="card"><label><input type="checkbox" value="몽심">🥐 몽심</label></div>
+<div class="card"><label><input type="checkbox" value="구오 베이크샵">🥖 구오 베이크샵</label></div>
+<div class="card"><label><input type="checkbox" value="손수베이커리">🍞 손수베이커리</label></div>
+<div class="card"><label><input type="checkbox" value="싶빵공장 둔산월평점">🏭 싶빵공장 둔산월평점</label></div>
+<div class="card"><label><input type="checkbox" value="르뺑99-1">🥐 르뺑99-1</label></div>
+<div class="card"><label><input type="checkbox" value="노른자 제과점">🥚 노른자 제과점</label></div>
+<div class="card"><label><input type="checkbox" value="스무하루">🍞 스무하루</label></div>
+<div class="card"><label><input type="checkbox" value="라블랑제">🥖 라블랑제</label></div>
+<div class="card"><label><input type="checkbox" value="곳간집">🏠 곳간집</label></div>
+<div class="card"><label><input type="checkbox" value="슬로우브레드">🌾 슬로우브레드</label></div>
+<div class="card"><label><input type="checkbox" value="콜마르 브레드">🥐 콜마르 브레드</label></div>
+<div class="card"><label><input type="checkbox" value="튀소정거장">🚏 튀소정거장</label></div>
+<div class="card"><label><input type="checkbox" value="보보로베이커리">🍞 보보로베이커리</label></div>
+<div class="card"><label><input type="checkbox" value="시옷기역삐읍 대전둔산점">🔤 시옷기역삐읍 대전둔산점</label></div>
+<div class="card"><label><input type="checkbox" value="모노브레드타임">🥖 모노브레드타임</label></div>
+<div class="card"><label><input type="checkbox" value="콩월">🌙 콩월</label></div>
+<div class="card"><label><input type="checkbox" value="다다제과점">🍪 다다제과점</label></div>
+<div class="card"><label><input type="checkbox" value="오픈오븐(Open oven)">🔥 오픈오븐(Open oven)</label></div>
+<div class="card"><label><input type="checkbox" value="빵담아">🥯 빵담아</label></div>
+<div class="card"><label><input type="checkbox" value="늘솜베이커리">🍞 늘솜베이커리</label></div>
+
+<button onclick="makeCourse()">
+🥖 추천 코스 생성
+</button>
+
+<div id="result" class="result"></div>
+
+</div>
+
+<script>
+const districtMap = {
+
+  "성심당본점":"중구",
+  "성심당케익부띠끄":"중구",
+  "튀소정거장":"중구",
+
+  "성심당 대전역점":"동구",
+
+  "디씨씨 성심당":"유성구",
+  "브레드마마 원신흥점":"유성구",
+  "몽심":"유성구",
+  "슬로우브레드":"유성구",
+  "다다제과점":"유성구",
+
+  "젤리포에":"서구",
+  "램키드(RAMKID)":"서구",
+  "이런날":"서구",
+  "꾸드뱅":"서구",
+  "파티세리소신":"서구",
+  "그린베이커리":"서구",
+  "싶빵공장 둔산월평점":"서구",
+  "르뺑99-1":"서구",
+  "라블랑제":"서구",
+  "콜마르 브레드":"서구",
+  "보보로베이커리":"서구",
+  "시옷기역삐읍 대전둔산점":"서구",
+  "콩월":"서구",
+
+  "내가잘가는빵집":"대덕구",
+  "손수베이커리":"대덕구",
+  "노른자 제과점":"대덕구",
+  "스무하루":"대덕구",
+  "곳간집":"대덕구",
+  "모노브레드타임":"대덕구",
+  "오픈오븐(Open oven)":"대덕구",
+  "빵담아":"대덕구",
+  "늘솜베이커리":"대덕구",
+
+  "구오 베이크샵":"유성구"
+};
+const checkboxes =
+document.querySelectorAll(
+'input[type="checkbox"]'
+);
+
+checkboxes.forEach(box => {
+
+    box.addEventListener(
+    'change',
+    function(){
+
+        const checked =
+        document.querySelectorAll(
+        'input[type="checkbox"]:checked'
+        );
+
+        if(checked.length > 5){
+
+            this.checked = false;
+
+            alert(
+            "최대 5개까지만 선택할 수 있습니다."
+            );
+        }
+
+    });
+
+});
+
+function openKakaoMap(place){
+
+    const url =
+    `https://map.kakao.com/link/search/${encodeURIComponent(place)}`;
+
+    window.open(url,'_blank');
+
+}
+function makeCourse(){
+
+    const checked =
+    document.querySelectorAll(
+    'input[type="checkbox"]:checked'
+    );
+
+    if(checked.length === 0){
+
+        alert(
+        "최소 1개 이상 선택해주세요."
+        );
+
+        return;
+    }
+
+    let html =
+    "<h2>🥖 추천 코스</h2>";
+
+    const grouped = {};
+
+checked.forEach(item => {
+
+    const district =
+    districtMap[item.value] || "기타";
+
+    if(!grouped[district]){
+        grouped[district] = [];
+    }
+
+    grouped[district].push(item.value);
+
+});
+
+let count = 1;
+
+for(const district in grouped){
+
+    html +=
+    `<h3>📍 ${district}</h3>`;
+
+    grouped[district].forEach(shop => {
+
+        html +=
+        `<div class='course-item'>
+        ${count}. ${shop}
+        </div>`;
+
+        count++;
+
+    });
+
+}
+
+    const districtCount =
+Object.keys(grouped).length;
+
+const moveTime =
+Math.max(0, (districtCount - 1) * 15);
+
+const totalTime =
+moveTime + (checked.length * 20);
+
+const firstBakery =
+checked[0].value;
+
+html += `
+<hr>
+
+🚗 구별 예상 이동시간 : ${moveTime}분<br>
+🍞 예상 빵지순례 시간 : 약 ${totalTime}분<br><br>
+
+<strong>
+총 ${checked.length}곳 선택
+</strong>
+
+<br><br>
+
+<button
+onclick="openKakaoMap('${firstBakery}')"
+style="
+background:#FEE500;
+color:black;
+font-size:18px;
+padding:12px 20px;
+border:none;
+border-radius:12px;
+cursor:pointer;
+">
+📍 카카오맵 길찾기
+</button>
+`;
+
+    const result =
+    document.getElementById(
+    "result"
+    );
+
+    result.innerHTML = html;
+
+    result.style.display = "block";
+}
+
+</script>
+
+</body>
+</html>

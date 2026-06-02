@@ -162,8 +162,8 @@
     </h1>
 
     <div class="sub">
-      키워드 리뷰 많은
-      대전 인기 빵집 모음
+      네이버 리뷰 '빵이 맛있어요' 1,700건 이상 빵집을 추천해드려요. ✨
+
     </div>
 
 
@@ -193,10 +193,7 @@
         튀김소보로
       </div>
 
-      <iframe
-        class="map"
-        src="https://maps.google.com/maps?q=성심당본점 대전&output=embed">
-      </iframe>
+      <div id="map1" class="map"></div>
 
     </div>
 
@@ -227,10 +224,7 @@
         과일시루
       </div>
 
-      <iframe
-        class="map"
-        src="https://maps.google.com/maps?q=성심당케익부띠끄 대전&output=embed">
-      </iframe>
+      <div id="map2" class="map"></div>
 
     </div>
 
@@ -262,10 +256,7 @@
         크루아상
       </div>
 
-      <iframe
-        class="map"
-        src="https://maps.google.com/maps?q=꾸드뱅 대전&output=embed">
-      </iframe>
+      <div id="map3" class="map"></div>
 
     </div>
 
@@ -295,10 +286,7 @@
         천연발효빵
       </div>
 
-      <iframe
-        class="map"
-        src="https://maps.google.com/maps?q=내가잘가는빵집 대전&output=embed">
-      </iframe>
+      <div id="map4" class="map"></div>
 
     </div>
 
@@ -332,10 +320,7 @@
         휘낭시에
       </div>
 
-      <iframe
-        class="map"
-        src="https://maps.google.com/maps?q=대전 유성구 그린베이커리&output=embed">
-      </iframe>
+      <div id="map5" class="map"></div>
 
     </div>
 
@@ -364,10 +349,7 @@
         몽블랑
       </div>
 
-      <iframe
-        class="map"
-        src="https://maps.google.com/maps?q=싶빵공장 둔산월평점 대전&output=embed">
-      </iframe>
+      <div id="map6" class="map"></div>
 
     </div>
 
@@ -402,10 +384,7 @@
         먹물소금빵
       </div>
 
-      <iframe
-        class="map"
-        src="https://maps.google.com/maps?q=브레드마마 원신흥점 대전&output=embed">
-      </iframe>
+      <<div id="map7" class="map"></div>
 
     </div>
 
@@ -436,10 +415,7 @@
         레몬마들렌
       </div>
 
-      <iframe
-        class="map"
-        src="https://maps.google.com/maps?q=몽심 한남대점 대전&output=embed">
-      </iframe>
+      <div id="map8" class="map"></div>
 
     </div>
 
@@ -468,10 +444,7 @@
         카이막브레드
       </div>
 
-      <iframe
-        class="map"
-        src="https://maps.google.com/maps?q=르뺑99-1 대전&output=embed">
-      </iframe>
+      <div id="map9" class="map"></div>
 
     </div>
 
@@ -506,14 +479,117 @@
         크루아상
       </div>
 
-      <iframe
-        class="map"
-        src="https://maps.google.com/maps?q=대전 유성구 원신흥로40번길 11 구오베이크샵&z=16&output=embed">
-      </iframe>
+      <div id="map10" class="map"></div>
 
     </div>
 
   </div>
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d97afdeb858533987b1d9c0bdb81ea5a&libraries=services"></script>
 
+<script>
+
+function createMap(id, address){
+
+  const container =
+    document.getElementById(id);
+
+  const options = {
+    center:
+      new kakao.maps.LatLng(
+        36.3504,
+        127.3845
+      ),
+    level:3
+  };
+
+  const map =
+    new kakao.maps.Map(
+      container,
+      options
+    );
+
+  const geocoder =
+    new kakao.maps.services.Geocoder();
+
+  geocoder.addressSearch(
+    address,
+    function(result,status){
+
+      if(
+        status ===
+        kakao.maps.services.Status.OK
+      ){
+
+        const coords =
+          new kakao.maps.LatLng(
+            result[0].y,
+            result[0].x
+          );
+
+        map.setCenter(coords);
+
+        new kakao.maps.Marker({
+          map:map,
+          position:coords
+        });
+
+      }
+
+    }
+  );
+
+}
+
+createMap(
+  'map1',
+  '대전광역시 중구 은행동 145-1'
+);
+
+createMap(
+  'map2',
+  '대전 중구 대종로 480'
+);
+
+createMap(
+  'map3',
+  '대전 유성구 지족동로 146'
+);
+
+createMap(
+  'map4',
+  '대전 서구 신갈마로 153'
+);
+
+createMap(
+  'map5',
+  '대전 유성구 테크노4로 80-7'
+);
+
+createMap(
+  'map6',
+  '대전 서구 청사로 130'
+);
+
+createMap(
+  'map7',
+  '대전 유성구 원신흥남로12번길 8-10'
+);
+
+createMap(
+  'map8',
+  '대전 대덕구 한남로38번길 28'
+);
+
+createMap(
+  'map9',
+  '대전 유성구 온천북로33번길 22-3'
+);
+
+createMap(
+  'map10',
+  '대전 유성구 원신흥로40번길 11'
+);
+
+</script>
 </body>
 </html>
