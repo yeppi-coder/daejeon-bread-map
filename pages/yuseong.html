@@ -5,7 +5,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-  <title>유성구 추천 코스</title>
+  <title>유성구 추천 빵집 리스트</title>
 
   <link rel="stylesheet" href="../style.css">
 
@@ -110,7 +110,7 @@
 
   <div class="container">
 
-    <h1>🍞 유성구 추천 빵집 코스</h1>
+    <h1>🍞 유성구 추천 빵집 리스트</h1>
 
     <!-- 성심당 DCC -->
     <div class="bakery-card">
@@ -461,7 +461,23 @@
     </div>
 
   </div>
+<div class="bakery-card">
 
+  <h2 style="text-align:center;">
+    📍 유성구 빵집 전체 지도
+  </h2>
+
+  <div
+    id="allMap"
+    style="
+      width:100%;
+      height:450px;
+      border-radius:15px;
+      overflow:hidden;
+    ">
+  </div>
+
+</div>
 
   <!-- 카카오맵 API -->
   <script
@@ -504,7 +520,119 @@
     createMap('map10', 36.3628, 127.3445);
     createMap('map11', 36.3920, 127.3980);
     createMap('map12', 36.3610, 127.3520);
+const allContainer =
+  document.getElementById('allMap');
 
+const allMap =
+  new kakao.maps.Map(
+    allContainer,
+    {
+      center:
+        new kakao.maps.LatLng(
+          36.365,
+          127.352
+        ),
+      level:6
+    }
+  );
+
+const places = [
+
+  {
+    name:'성심당 DCC점',
+    lat:36.3925,
+    lng:127.3970
+  },
+
+  {
+    name:'카페1956',
+    lat:36.3925,
+    lng:127.3970
+  },
+
+  {
+    name:'꾸드뱅',
+    lat:36.3625,
+    lng:127.3560
+  },
+
+  {
+    name:'파티세리소신',
+    lat:36.3660,
+    lng:127.3440
+  },
+
+  {
+    name:'그린베이커리',
+    lat:36.3645,
+    lng:127.3480
+  },
+
+  {
+    name:'브레드마마',
+    lat:36.3435,
+    lng:127.3410
+  },
+
+  {
+    name:'구오베이크샵',
+    lat:36.3618,
+    lng:127.3500
+  },
+
+  {
+    name:'르뺑99-1',
+    lat:36.3700,
+    lng:127.3400
+  },
+
+  {
+    name:'노른자제과점',
+    lat:36.3590,
+    lng:127.3485
+  },
+
+  {
+    name:'슬로우브레드',
+    lat:36.3655,
+    lng:127.3470
+  },
+
+  {
+    name:'콜마르브레드',
+    lat:36.3628,
+    lng:127.3445
+  },
+
+  {
+    name:'튀소정거장',
+    lat:36.3920,
+    lng:127.3980
+  },
+
+  {
+    name:'콩월',
+    lat:36.3610,
+    lng:127.3520
+  }
+
+];
+
+places.forEach(place => {
+
+  new kakao.maps.Marker({
+
+    map:allMap,
+
+    position:
+      new kakao.maps.LatLng(
+        place.lat,
+        place.lng
+      )
+
+  });
+
+});
   </script>
 
 </body>

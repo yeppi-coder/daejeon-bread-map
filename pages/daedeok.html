@@ -5,7 +5,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-  <title>대덕구 추천 코스</title>
+  <title>대덕구 추천 빵집 리스트</title>
 
   <link rel="stylesheet" href="../style.css">
 </head>
@@ -14,7 +14,7 @@
 
   <div class="container">
 
-    <h1>🍞 대덕구 추천 빵집 코스</h1>
+    <h1>🍞 대덕구 추천 빵집 리스트</h1>
 
     <!-- 보보로베이커리 -->
     <div class="bakery-card">
@@ -313,7 +313,23 @@
 
   </div>
 
+<div class="bakery-card">
 
+  <h2 style="text-align:center;">
+    📍 대덕구 빵집 전체 지도
+  </h2>
+
+  <div
+    id="allMap"
+    style="
+      width:100%;
+      height:450px;
+      border-radius:15px;
+      overflow:hidden;
+    ">
+  </div>
+
+</div>
   <!-- 카카오맵 API -->
   <script
   src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d97afdeb858533987b1d9c0bdb81ea5a">
@@ -346,8 +362,7 @@
 
 
     // 각 빵집 지도 생성
-    // 좌표는 임시값이므로 실제 위치로 수정 가능
-
+    
     createMap('map1', 36.3630, 127.4300);
     createMap('map2', 36.3640, 127.4310);
     createMap('map3', 36.3650, 127.4320);
@@ -361,6 +376,101 @@
     createMap('map11', 36.3730, 127.4400);
     createMap('map12', 36.3740, 127.4410);
 
+    const allContainer =
+  document.getElementById('allMap');
+
+const allMap =
+  new kakao.maps.Map(
+    allContainer,
+    {
+      center:
+        new kakao.maps.LatLng(
+          36.3685,
+          127.4355
+        ),
+      level:6
+    }
+  );
+
+const places = [
+
+  {
+    name:'보보로베이커리',
+    address:'대전 대덕구 계족산로81번길 96'
+  },
+
+  {
+    name:'가또앤브레드',
+    address:'대전 대덕구 선비마을로23번길 35 1층'
+  },
+
+  {
+    name:'두두당',
+    address:'대전 대덕구 대청로 234'
+  },
+
+  {
+    name:'갓구운빵천국',
+    address:'대전 대덕구 동춘당로 181'
+  },
+
+  {
+    name:'빵과사람들',
+    address:'대전 대덕구 계족로564번길 19'
+  },
+
+  {
+    name:'빵굽는나라',
+    address:'대전 대덕구 석봉로38번길 2'
+  },
+
+  {
+    name:'브레드앤밀',
+    address:'대전 대덕구 동춘당로114번길 60'
+  },
+
+  {
+    name:'쉐프과자점',
+    address:'대전 대덕구 동심1길 35'
+  },
+
+  {
+    name:'베를리너제과점',
+    address:'대전 대덕구 신탄진로 230 1층'
+  },
+
+  {
+    name:'스톤봉베이크샵',
+    address:'대전 대덕구 덕암북로 29 1층'
+  },
+
+  {
+    name:'이든베이커리',
+    address:'대전 대덕구 신탄진로218번길 42'
+  },
+
+  {
+    name:'빵뜨레',
+    address:'대전 대덕구 대덕대로 1596-1'
+  }
+
+];
+
+places.forEach(place => {
+
+  new kakao.maps.Marker({
+
+    map:allMap,
+
+    position:
+      new kakao.maps.LatLng(
+        place.lat,
+        place.lng
+      )
+
+  });
+
+});
   </script>
 
 </body>

@@ -5,7 +5,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-  <title>서구 추천 코스</title>
+  <title>서구 추천 빵집 리스트</title>
 
   <link rel="stylesheet" href="../style.css">
 
@@ -110,7 +110,7 @@
 
   <div class="container">
 
-    <h1>🍞 서구 추천 빵집 코스</h1>
+    <h1>🍞 서구 추천 빵집 리스트</h1>
 
     <!-- 젤리포에 -->
     <div class="bakery-card">
@@ -407,6 +407,31 @@
   src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d97afdeb858533987b1d9c0bdb81ea5a">
   </script>
 
+  <h2 style="
+text-align:center;
+margin:50px 0 20px;
+color:#5c3d1e;">
+
+</h2>
+
+<div class="bakery-card">
+
+  <h2 style="text-align:center;">
+    📍 서구 빵집 전체 지도
+  </h2>
+
+  <div
+    id="allMap"
+    style="
+    width:100%;
+    height:450px;
+    border-radius:15px;
+    overflow:hidden;
+    ">
+  </div>
+
+</div>
+
   <script>
 
     function createMap(id, lat, lng){
@@ -442,7 +467,114 @@
     createMap('map10', 36.3490, 127.3785);
     createMap('map11', 36.3480, 127.3745);
     createMap('map12', 36.3515, 127.3775);
+const allContainer =
+  document.getElementById('allMap');
 
+const allMap =
+  new kakao.maps.Map(
+    allContainer,
+    {
+      center:
+        new kakao.maps.LatLng(
+          36.3505,
+          127.3780
+        ),
+      level:5
+    }
+  );
+
+const places = [
+
+  {
+    name:'젤리포에',
+    lat:36.3510,
+    lng:127.3780
+  },
+
+  {
+    name:'이런날',
+    lat:36.3485,
+    lng:127.3815
+  },
+
+  {
+    name:'내가잘가는빵집',
+    lat:36.3540,
+    lng:127.3740
+  },
+
+  {
+    name:'손수베이커리',
+    lat:36.3495,
+    lng:127.3770
+  },
+
+  {
+    name:'싶빵공장',
+    lat:36.3525,
+    lng:127.3790
+  },
+
+  {
+    name:'스무하루',
+    lat:36.3505,
+    lng:127.3760
+  },
+
+  {
+    name:'라블랑제',
+    lat:36.3475,
+    lng:127.3800
+  },
+
+  {
+    name:'곳간집',
+    lat:36.3518,
+    lng:127.3820
+  },
+
+  {
+    name:'시옷기역삐읍',
+    lat:36.3530,
+    lng:127.3755
+  },
+
+  {
+    name:'오픈오븐',
+    lat:36.3490,
+    lng:127.3785
+  },
+
+  {
+    name:'베이크오프',
+    lat:36.3480,
+    lng:127.3745
+  },
+
+  {
+    name:'하레하레',
+    lat:36.3515,
+    lng:127.3775
+  }
+
+];
+
+places.forEach(place => {
+
+  const marker =
+    new kakao.maps.Marker({
+
+      map:allMap,
+
+      position:
+        new kakao.maps.LatLng(
+          place.lat,
+          place.lng
+        )
+
+    });
+
+});
   </script>
 
 </body>
