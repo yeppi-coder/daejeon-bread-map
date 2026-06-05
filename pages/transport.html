@@ -2,13 +2,10 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <title>테마별 코스</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대중교통 추천 코스</title>
 
   <style>
-
     body{
       margin:0;
       font-family:sans-serif;
@@ -16,117 +13,80 @@
     }
 
     .container{
-
       min-height:100vh;
-
       display:flex;
       flex-direction:column;
-
       justify-content:center;
       align-items:center;
-
       text-align:center;
-
       padding:40px;
     }
 
     h1{
-
-      font-size:50px;
-
+      font-size:48px;
       color:#5c3d1e;
-
       margin-bottom:20px;
     }
 
     p{
-
       font-size:24px;
-
       color:#7a5a36;
-
       margin-bottom:50px;
     }
 
-    .theme-buttons{
-
+    .district-buttons{
       display:flex;
-
-      flex-wrap:wrap;
-
       justify-content:center;
-
-      gap:25px;
+      flex-wrap:wrap;
+      gap:20px;
     }
 
     button{
-
       border:none;
-
       background:#d2a76f;
-
       color:white;
-
       font-size:26px;
-
       padding:20px 35px;
-
       border-radius:20px;
-
       cursor:pointer;
-
       transition:0.2s;
     }
 
     button:hover{
-
       background:#b98950;
-
       transform:translateY(-4px);
     }
-
   </style>
-
 </head>
 
 <body>
 
   <div class="container">
 
-    <h1>
-      🥐 테마별 빵집 추천
-    </h1>
+    <h1>🚌 대중교통 코스 추천</h1>
 
-    <p>
-      취향에 맞는 빵 테마를 골라보세요
-    </p>
+    <p>출발 위치를 선택해주세요</p>
 
-    <div class="theme-buttons">
+    <div class="district-buttons">
 
-      <!-- 디저트 -->
-      <button onclick="location.href='dessert.html'">
-        🍓 디저트 테마
+      <button onclick="location.href='walk.html'">
+        🚉 대전역 출발
       </button>
 
-      <!-- 맛 중심 -->
-      <button onclick="location.href='taste-course.html'">
-        🍪 맛 중심 테마
+      <button onclick="location.href='yuseong-terminal.html'">
+        🚌 유성복합 출발
       </button>
 
-  
-      <!-- 유명 -->
-      <button onclick="location.href='famous.html'">
-        🔥 유명 빵집 테마
+      <button onclick="location.href='seodaejeon.html'">
+        🚉 서대전역 출발
       </button>
 
-      <!-- 가성비 -->
-      <button onclick="location.href='cheap.html'">
-        💸 가성비 테마
+      <button onclick="location.href='government.html'">
+        🏢 정부청사 출발
       </button>
 
-      <!-- 건강 -->
-      <button onclick="location.href='healthy.html'">
-        🌿 건강빵 테마 
+      <button onclick="location.href='daejeon-terminal.html'">
+        🚌 대전복합 출발
       </button>
 
     </div>

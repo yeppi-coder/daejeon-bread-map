@@ -84,6 +84,18 @@
 
       line-height:1.5;
     }
+    .place-name{
+
+  font-size:24px;
+
+  font-weight:700;
+
+  color:#5c3d1e;
+
+  margin-bottom:10px;
+
+  display:block;
+}
 
     .step{
 
@@ -182,7 +194,46 @@
 
       margin-bottom:25px;
     }
+.route-btn-wrap{
 
+  margin-top:25px;
+
+  text-align:center;
+}
+
+.route-btn{
+
+  display:block;
+
+  width:100%;
+
+  box-sizing:border-box;
+
+  background:#FEE500;
+
+  color:#3C1E1E;
+
+  text-decoration:none;
+
+  font-size:20px;
+
+  font-weight:bold;
+
+  padding:18px;
+
+  border-radius:15px;
+
+  text-align:center;
+
+  transition:0.2s;
+}
+
+.route-btn:hover{
+
+  transform:translateY(-3px);
+
+  opacity:0.9;
+}
     @media (max-width:768px){
 
       h1{
@@ -228,16 +279,18 @@
 
     <div class="course-box">
 
-      <div class="course-title">
-        🥐 중구 → 서구  빵지순례 코스
-      </div>
+    <div class="course-title">
+  🚉 대전역 출발 추천 빵지순례 코스
+</div>
 
 
       <!-- 성심당 -->
 
       <div class="step">
 
-        📍 성심당 본점 (중구)<br>
+       <span class="place-name">
+📍 성심당 본점 (중구)
+</span>
 
         <div class="menu">
           대표 메뉴 :
@@ -271,48 +324,91 @@
       </div>
 
 
-      <!-- 영춘모찌 -->
+     <!-- 램키드 -->
 
-      <div class="step">
+<div class="step">
 
-        🍓 영춘모찌 (중구)<br>
+  <span class="place-name">
+🍮 램키드 (중구)
+</span>
 
-        <div class="menu">
-          대표 메뉴 :
-          과일모찌
-        </div>
+  <div class="menu">
+    대표 메뉴 :
+    꿈돌이 푸딩
+  </div>
 
-        <div class="hidden">
-          숨은 메뉴 :
-          딸기백앙금모찌(시즌)
-        </div>
+  <div class="hidden">
+    숨은 메뉴 :
+    버터떡
+  </div>
 
-        <div class="holiday">
-          휴무 : 매주 일요일
-        </div>
+  <div class="holiday">
+    휴무 : 없음
+  </div>
 
-        <div class="time">
-          영업시간 : 09:00 ~ 13:00
-        </div>
+  <div class="time">
+    영업시간 : 11:00 ~ 20:30
+  </div>
 
-        <div class="honey">
-          💡 늦게 가면 품절 많음!
-        </div>
+  <div class="honey">
+    💡 대전 감성 디저트 맛집
+  </div>
 
-      </div>
+</div>
 
-      <div id="map2" class="map"></div>
+<div id="map2" class="map"></div>
 
-      <div class="step">
-        ↓
-      </div>
+<div class="step">
+  ↓
+</div>
 
 
+
+
+     <!-- 다다제과점 -->
+
+<div class="step">
+
+<span class="place-name">
+🥯 다다제과점 (중구)
+</span>
+
+  <div class="menu">
+    대표 메뉴 :
+    베이글샌드,
+    쫀득빵
+  </div>
+
+  <div class="hidden">
+    숨은 메뉴 :
+    버터떡
+  </div>
+
+  <div class="holiday">
+    휴무 : 월·화·수
+  </div>
+
+  <div class="time">
+    영업시간 :
+    목~토 12:00 ~ 17:30
+  </div>
+
+  <div class="honey">
+    💡 대전 로컬 감성 베이커리
+  </div>
+
+</div>
+
+<div id="map4" class="map"></div>
+<div class="step">
+  ↓
+  </div>
       <!-- 하레하레 -->
 
       <div class="step">
-
-        ☕ 하레하레 둔산점<br>
+<span class="place-name">
+☕ 하레하레 둔산점 (서구)
+</span>
 
         <div class="menu">
           대표 메뉴 :
@@ -349,83 +445,41 @@
       </div>
 
 
-      <!-- 미미제과점 -->
 
-      <div class="step">
+      <!-- 시옷기역삐읍 -->
 
-        🍞 미미제과점 (갈마)<br>
+<div class="step">
 
-        <div class="menu">
-          대표 메뉴 :
-          프레첼소금빵,
-          밀크버터쿠키
-        </div>
+<span class="place-name">
+🧂 시옷기역삐읍 둔산점 (서구)
+</span>
 
-        <div class="hidden">
-          숨은 메뉴 :
-          두바이크루키,
-          왁뿌소금빵,
-          두바이쫀득쿠키
-        </div>
+  <div class="menu">
+    대표 메뉴 :
+    잠봉뵈르 소금빵,
+    명란에그폭탄 소금빵
+  </div>
 
-        <div class="holiday">
-          휴무 : 없음
-        </div>
+  <div class="hidden">
+    숨은 메뉴 :
+    연유버터 소금빵
+  </div>
 
-        <div class="time">
-          영업시간 :
-          11:00 ~ 17:00
-          (라스트오더 16:30)
-        </div>
+  <div class="holiday">
+    휴무 : 없음
+  </div>
 
-        <div class="honey">
-          💡 따뜻할 때 먹으면
-          버터향 대박
-        </div>
+  <div class="time">
+    영업시간 : 10:00 ~ 20:00
+  </div>
 
-      </div>
+  <div class="honey">
+    💡 소금빵 좋아하면 필수 방문
+  </div>
 
-      <div id="map4" class="map"></div>
+</div>
 
-      <div class="step">
-        ↓
-      </div>
-
-
-      <!-- 플래닛 에그타르트 -->
-
-      <div class="step">
-
-        🥧 플래닛 에그타르트 (갈마)<br>
-
-        <div class="menu">
-          대표 메뉴 :
-          바닐라 에그타르트
-        </div>
-
-        <div class="hidden">
-          숨은 메뉴 :
-          라즈베리 에그타르트
-        </div>
-
-        <div class="holiday">
-          휴무 : 매주 월요일
-        </div>
-
-        <div class="time">
-          영업시간 :
-          화~토 10:30 ~ 17:00<br>
-          일요일 10:30 ~ 16:00
-        </div>
-
-        <div class="honey">
-          💡 에그타르트 위에 소금 뿌려먹으면 킥!!
-        </div>
-
-      </div>
-
-      <div id="map5" class="map"></div>
-
+<div id="map5" class="map"></div>
 
       <!-- 이동 팁 -->
 
@@ -433,13 +487,29 @@
 
         🚇 추천 이동 방법<br><br>
 
-        • 중구 코스는 도보 이동 가능<br>
-        • 둔산 이동은 지하철 + 버스 추천<br>
-        • 갈마동은 버스로 10분 내 이동 가능<br><br>
+       • 성심당 → 램키드 → 다다제과점 도보 이동 가능<br>
+       • 중구 → 서구는 지하철 이용 추천<br>
+       • 하레하레 → 시옷기역삐읍 도보 이동 가능<br>
 
-        💡 하루 코스로 돌기 좋은 동선!
+💡 대전 대표 빵집과 로컬 맛집을 모두 즐길 수 있는 코스!
+
+        
 
       </div>
+
+      <div class="route-btn-wrap">
+
+  <a
+    href="https://map.kakao.com/link/to/성심당본점,36.3277,127.4272"
+    target="_blank"
+    class="route-btn">
+
+    🗺️ 카카오맵
+     길찾기
+
+  </a>
+
+</div>
 
     </div>
 
