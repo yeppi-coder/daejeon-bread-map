@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🚌 유성복합 출발 코스</title>
+
+<style>
+
+body{
+  margin:0;
+  font-family:sans-serif;
+  background:#fff8f0;
+}
+
+.container{
+  width:90%;
+  max-width:700px;
+  margin:30px auto;
+}
+
+h1{
+  text-align:center;
+  font-size:32px;
+  color:#5c3d1e;
+  margin-bottom:16px;
+}
+
+.sub{
+  text-align:center;
+  color:#7a5a36;
+  margin-bottom:30px;
+}
+
+.course-box{
+  background:white;
+  border-radius:25px;
+  padding:25px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.course-title{
+  font-size:24px;
+  font-weight:bold;
+  color:#5c3d1e;
+  margin-bottom:20px;
+}
+
+.place-name{
+  font-size:24px;
+  font-weight:bold;
+  color:#5c3d1e;
+  display:block;
+  margin-bottom:10px;
+}
+
+.step{
+  font-size:16px;
+  color:#5c3d1e;
+  line-height:1.8;
+  margin-bottom:12px;
+}
+
+.menu{
+  color:#c9772b;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.tip{
+  margin-top:20px;
+  padding:18px;
+  background:#fff2df;
+  border-radius:15px;
+  color:#7a5a36;
+  line-height:1.8;
+}
+
+.route-btn-wrap{
+  margin-top:25px;
+}
+
+.route-btn{
+  display:block;
+  width:100%;
+  box-sizing:border-box;
+  background:#FEE500;
+  color:#3C1E1E;
+  text-decoration:none;
+  text-align:center;
+  font-size:20px;
+  font-weight:bold;
+  padding:18px;
+  border-radius:15px;
+}
+.map{
+
+  width:100%;
+
+  height:250px;
+
+  border-radius:15px;
+
+  margin-top:18px;
+
+  margin-bottom:25px;
+}
+.hidden{
+  color:#b45309;
+  font-size:15px;
+  margin-bottom:10px;
+  line-height:1.6;
+}
+
+.holiday{
+  color:#9a7b4f;
+  font-size:15px;
+  margin-top:8px;
+  margin-bottom:6px;
+}
+
+.time{
+  color:#8b6b43;
+  font-size:15px;
+  margin-bottom:8px;
+  line-height:1.6;
+}
+
+.honey{
+  font-size:15px;
+  color:#7a5a36;
+  line-height:1.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🚌 유성복합 출발 코스</h1>
+
+<div class="sub">
+유성구 → 서구 추천 빵지순례 코스
+</div>
+
+<div class="course-box">
+
+<div class="course-title">
+🚌 유성복합 출발 추천 빵지순례 코스
+</div>
+
+<!-- 르뺑99-1 -->
+
+<div class="step">
+
+<span class="place-name">
+🥐 르뺑99-1
+</span>
+
+<div class="menu">
+대표 메뉴 : 소금빵, 크루아상
+</div>
+
+<div class="hidden">
+숨은 메뉴 : 앙버터, 바게트
+</div>
+
+<div class="holiday">
+휴무 : 없음
+</div>
+
+<div class="time">
+영업시간 : 08:30 ~ 23:00
+</div>
+
+<div class="honey">
+💡 늦은 시간까지 운영해서 방문하기 편함
+</div>
+
+</div>
+
+<div id="map1" class="map"></div>
+
+<div class="step">
+↓<br>
+
+</div>
+
+<!-- 성심당 DCC -->
+
+<div class="step">
+
+<span class="place-name">
+🍞 성심당 DCC점
+</span>
+
+<div class="menu">
+대표 메뉴 : 튀김소보로
+</div>
+
+<div class="hidden">
+숨은 메뉴 : 명란바게트, 김치찹쌀주먹밥
+</div>
+
+<div class="holiday">
+휴무 : 없음
+</div>
+
+<div class="time">
+영업시간 : 08:00 ~ 22:00
+</div>
+
+<div class="honey">
+💡 DCC 전시 관람객들도 많이 찾는 인기 지점
+</div>
+
+</div>
+
+<div id="map2" class="map"></div>
+
+<div class="step">
+↓<br>
+</div>
+
+<!-- 튀소정거장 -->
+
+<div class="step">
+
+<span class="place-name">
+🥖 튀소정거장
+</span>
+
+<div class="menu">
+대표 메뉴 : 튀김소보로
+</div>
+
+<div class="hidden">
+숨은 메뉴 : 부추빵, 명란바게트
+</div>
+
+<div class="holiday">
+휴무 : 없음
+</div>
+
+<div class="time">
+영업시간 : 08:00 ~ 22:00
+</div>
+
+<div class="honey">
+💡 성심당 인기 메뉴를 빠르게 구매 가능
+</div>
+
+</div>
+
+<div id="map3" class="map"></div>
+
+<div class="step">
+↓<br>
+</div>
+
+<!-- 젤리포에 -->
+
+<div class="step">
+
+<span class="place-name">
+🍮 젤리포에
+</span>
+
+<div class="menu">
+대표 메뉴 : 푸딩
+</div>
+
+<div class="hidden">
+숨은 메뉴 : 팬케이크
+</div>
+
+<div class="holiday">
+휴무 : 없음
+</div>
+
+<div class="time">
+영업시간 : 12:00 ~ 21:00
+</div>
+
+<div class="honey">
+💡 푸딩 좋아하면 꼭 들러야 하는 디저트 맛집
+</div>
+
+</div>
+
+<div id="map4" class="map"></div>
+
+<div class="step">
+↓<br>
+</div>
+
+<!-- 오픈오븐 -->
+
+<div class="step">
+
+<span class="place-name">
+🔥 오픈오븐
+</span>
+
+<div class="menu">
+대표 메뉴 : 쪽파크림치즈 소금빵
+</div>
+<div class="hidden">
+숨은 메뉴 :
+바질소세지빵,
+에그타르트
+</div>
+
+<div class="holiday">
+휴무 : 없음
+</div>
+
+<div class="time">
+영업시간 : 08:00 ~ 21:00
+</div>
+
+<div class="honey">
+💡 소금빵과 크로아상 종류가 특히 인기
+</div>
+
+</div>
+
+<div id="map5" class="map"></div>
+
+<div class="tip">
+
+🚌 추천 이동 방법<br><br>
+
+• 르뺑99-1 → 성심당 DCC점 버스 이용 (약 9개 정류장)<br>
+• 성심당 DCC점 → 튀소정거장 도보 이동 (도보 1분)<br>
+• 튀소정거장 → 젤리포에 버스 이용 (약 5개 정류장)<br>
+• 젤리포에 → 오픈오븐 도보 이동 (도보 5분)<br><br>
+
+💡 유성구 대표 베이커리부터 서구 인기 빵집까지 즐길 수 있는 코스!
+
+</div>
+
+<div class="route-btn-wrap">
+
+<a
+href="https://map.kakao.com/"
+target="_blank"
+class="route-btn">
+
+🗺️ 카카오맵 길찾기
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+<!-- 카카오맵 API -->
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d97afdeb858533987b1d9c0bdb81ea5a">
+</script>
+
+<script>
+
+function createMap(id, lat, lng){
+
+  const container =
+    document.getElementById(id);
+
+  const options = {
+
+    center:
+      new kakao.maps.LatLng(
+        lat,
+        lng
+      ),
+
+    level:3,
+  };
+
+  const map =
+    new kakao.maps.Map(
+      container,
+      options
+    );
+
+  const marker =
+    new kakao.maps.Marker({
+
+      position:
+        new kakao.maps.LatLng(
+          lat,
+          lng
+        ),
+    });
+
+  marker.setMap(map);
+}
+
+createMap(
+  'map1',
+  36.3700,
+  127.3400
+);
+
+createMap(
+  'map2',
+  36.3925,
+  127.3970
+);
+
+createMap(
+  'map3',
+  36.3924,
+  127.3993
+);
+
+createMap(
+  'map4',
+  36.3510,
+  127.3780
+);
+
+createMap(
+  'map5',
+  36.3490,
+  127.3785
+);
+
+</script>
+</body>
+</html>
