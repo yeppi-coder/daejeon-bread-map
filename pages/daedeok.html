@@ -366,19 +366,19 @@ src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d97afdeb858533987b1d9c0bdb81ea
 
     // 각 빵집 지도 생성
     
-    createMap('map1', 36.3630, 127.4300);
-    createMap('map2', 36.3640, 127.4310);
-    createMap('map3', 36.3650, 127.4320);
-    createMap('map4', 36.3660, 127.4330);
-    createMap('map5', 36.3670, 127.4340);
-    createMap('map6', 36.3680, 127.4350);
-    createMap('map7', 36.3690, 127.4360);
-    createMap('map8', 36.3700, 127.4370);
-    createMap('map9', 36.3710, 127.4380);
-    createMap('map10', 36.3720, 127.4390);
-    createMap('map11', 36.3730, 127.4400);
-    createMap('map12', 36.3740, 127.4410);
+   createMap('map1', 36.366895, 127.437632); // 보보로베이커리
+   createMap('map2', 36.364674, 127.445681); // 가또앤브레드
+   createMap('map3', 36.448476, 127.450775); // 두두당
+   createMap('map4', 36.375011, 127.430992); // 갓구운빵천국
+   createMap('map5', 36.362256, 127.432543); // 빵과사람들
+   createMap('map6', 36.447417, 127.425887); // 빵굽는나라
+   createMap('map7', 36.366459, 127.439908); // 브레드앤밀
+   createMap('map8', 36.363150, 127.416762); // 쉐프과자점
 
+   createMap('map9', 36.3710, 127.4380);     // 베를리너제과점
+   createMap('map10', 36.447497, 127.422032); // 스톤봉베이크샵
+   createMap('map11', 36.3730, 127.4400);    // 이든베이커리
+   createMap('map12', 36.450459, 127.422995); // 빵뜨레
     const allContainer =
   document.getElementById('allMap');
 
@@ -399,103 +399,92 @@ const places = [
 
   {
     name:'보보로베이커리',
-    address:'대전 대덕구 계족산로81번길 96'
+    lat:36.366895,
+    lng:127.437632
   },
 
   {
     name:'가또앤브레드',
-    address:'대전 대덕구 선비마을로23번길 35 1층'
+    lat:36.364674,
+    lng:127.445681
   },
 
   {
     name:'두두당',
-    address:'대전 대덕구 대청로 234'
+    lat:36.448476,
+    lng:127.450775
   },
 
-  {
+ {
     name:'갓구운빵천국',
-    address:'대전 대덕구 동춘당로 181'
+    lat:36.375011,
+    lng:127.430992
   },
-
   {
     name:'빵과사람들',
-    address:'대전 대덕구 계족로564번길 19'
+    lat:36.362504,
+    lng:127.432479
   },
 
   {
     name:'빵굽는나라',
-    address:'대전 대덕구 석봉로38번길 2'
+    lat:36.365669,
+    lng:127.474858
   },
 
   {
     name:'브레드앤밀',
-    address:'대전 대덕구 동춘당로114번길 60'
+    lat:36.366459,
+    lng:127.439908
   },
 
   {
     name:'쉐프과자점',
-    address:'대전 대덕구 동심1길 35'
+    lat:36.386058,
+    lng:127.418377
   },
 
   {
     name:'베를리너제과점',
-    address:'대전 대덕구 신탄진로 230 1층'
+    lat:36.3710,
+    lng:127.4380
   },
 
   {
     name:'스톤봉베이크샵',
-    address:'대전 대덕구 덕암북로 29 1층'
+    lat:36.447497,
+    lng:127.422032
   },
 
   {
     name:'이든베이커리',
-    address:'대전 대덕구 신탄진로218번길 42'
+    lat:36.3730,
+    lng:127.4400
   },
-
 
   {
     name:'빵뜨레',
-    address:'대전 대덕구 대덕대로 1596-1'
+    lat:36.3740,
+    lng:127.4410
   }
 
 ];
 
-const geocoder =
-  new kakao.maps.services.Geocoder();
-
 places.forEach(place => {
 
-  geocoder.addressSearch(
-    place.address,
+  new kakao.maps.Marker({
 
-    function(result,status){
+    map: allMap,
 
-      if(
-        status ===
-        kakao.maps.services.Status.OK
-      ){
+    position: new kakao.maps.LatLng(
+      place.lat,
+      place.lng
+    )
 
-        const coords =
-          new kakao.maps.LatLng(
-            result[0].y,
-            result[0].x
-          );
-
-        new kakao.maps.Marker({
-
-          map:allMap,
-
-          position:coords
-
-        });
-
-      }
-
-    }
-
-  );
+  });
 
 });
+
   </script>
 
 </body>

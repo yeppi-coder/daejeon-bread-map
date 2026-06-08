@@ -406,8 +406,27 @@
       height:450px;
       border-radius:15px;
       overflow:hidden;
-    ">
+    ">  
   </div>
+ 
+
+<a
+  href="https://map.kakao.com/"
+  target="_blank"
+  style="
+    display:block;
+    margin-top:20px;
+    background:#FEE500;
+    color:#3C1E1E;
+    text-decoration:none;
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    padding:18px;
+    border-radius:15px;
+  ">
+  🗺️ 카카오맵 바로가기
+</a>
 
 </div>
   <!-- 카카오맵 API -->
@@ -439,14 +458,14 @@
     }
 
     createMap('map1', 36.3320, 127.4345);
-    createMap('map3', 36.3360, 127.4400);
+    createMap('map3', 36.303159, 127.453716); // 모노브레드타임
     createMap('map4', 36.3335, 127.4360);
     createMap('map5', 36.3315, 127.4375);
     createMap('map6', 36.3350, 127.4390);
-    createMap('map7', 36.3305, 127.4355);
-    createMap('map8', 36.3340, 127.4410);
+    createMap('map7', 36.345718, 127.441888); // 하르방베이커리
+    createMap('map8', 36.371551, 127.469599); // 빵굽는마을
     createMap('map9', 36.3365, 127.4420);
-    createMap('map10', 36.3370, 127.4435);
+    createMap('map10', 36.331760, 127.444680); // 해뜨는빵집
     createMap('map11', 36.3380, 127.4440);
     createMap('map12', 36.3390, 127.4450);
 const allContainer =
@@ -474,10 +493,11 @@ const places = [
   },
 
   {
-    name:'모노브레드타임',
-    lat:36.3360,
-    lng:127.4400
+  name:'모노브레드타임',
+  lat:36.303159,
+  lng:127.453716
   },
+
 
   {
     name:'언니네빵집',
@@ -498,15 +518,15 @@ const places = [
   },
 
   {
-    name:'하르방베이커리',
-    lat:36.3305,
-    lng:127.4355
+  name:'하르방베이커리',
+  lat:36.345718,
+  lng:127.441888
   },
 
   {
-    name:'빵굽는마을',
-    lat:36.3340,
-    lng:127.4410
+  name:'빵굽는마을',
+  lat:36.371551,
+  lng:127.469599
   },
 
   {
@@ -516,9 +536,9 @@ const places = [
   },
 
   {
-    name:'해뜨는빵집',
-    lat:36.3370,
-    lng:127.4435
+  name:'해뜨는빵집',
+  lat:36.331760,
+  lng:127.444680
   },
 
   {
